@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study TSM-3B</title>
+  <!--CDN or Lbraries of the JsBarcode and the CryptoJs -->
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <h1>Case Study OOP</h1>
+  
+
+  <label for="plaintext">Enter Text to Encrypt:</label>
+  <input type="text" id="plaintext" placeholder="Type 1,2 or 3" />
+  <button onclick="generateBarcode()">Generate Barcode</button>
+  <div>
+    <svg id="barcode"></svg>
+</div>
+<p>If you don't have a Scanner you can just type or copy the text bellow the barcode</p>
+
+
+<h3>Product and Price</h3>
+<table >
+  <tr>
+    <td> Product</td>
+    <td> Price</td>
+  </tr>
+  <tr>
+    <td id="product-name-1"> &nbsp;&nbsp;</td>
+    <td id="product-price-1">&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="product-name-2"> &nbsp;&nbsp;</td>
+    <td id="product-price-2">&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="product-name-3"> &nbsp;&nbsp;</td>
+    <td id="product-price-3">&nbsp;&nbsp;</td>
+  </tr>
+</table>
+
+  <br><br>
+  <label for="scanData"> Enter the Barcode:</label>
+  <input type="text" id="scanData">
+  <button onclick="decryptData()">Scan</button>
+
+  <br>
+  <br>
+  <label for="cash"> Enter the amount:</label>
+  <input type="number" id="cash-number">
+  <button onclick="getChange()">Okay</button>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h3>Monitor View:</h3>
+  <p id="decryptedOutput"></p>
+
+  <p id="Monitor-view-product"></p>
+  <p id="total-product-price"></p>
+
+  <script src="encrypt.js"></script>
+</body>
+</html>
